@@ -1,0 +1,204 @@
+html, body {
+    image-rendering: -webkit-optimize-contrast;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: hsl(0, 0%, 8%);
+    font-family: 'Dosis', 'Nunito', 'Roboto', sans-serif;
+    overflow-y: scroll;
+    scrollbar-width: none; 
+    overflow: -moz-scrollbars-none; /* Firefox-specific */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+    width: 0;
+    height: 0;
+}
+
+.main-container {
+    max-width: 83.3vw;
+    margin: 0px auto;
+    padding: 16px;
+    padding-top: 5vw;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    position: relative;
+    min-height: calc(100vh - 80px); /* Ensures main-container is at least full viewport height minus some padding */
+}
+
+.profile-container {
+    border-radius: 8px;
+    margin-bottom: 16px; 
+    padding: 16px;
+}
+
+.header-container, .left-container, .text-container, .image-container, .right-container, .footer-container {
+    background: hsl(0, 0%, 4%); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 16px; 
+    padding: 16px;
+}
+
+.header-container {
+    opacity: 0.5;
+    padding: 0px;
+    margin: calc(12vh - 64px);
+    background-color: #00000000;
+    box-shadow: none;
+}
+
+.footer-container {
+    opacity: 1;
+    padding: 0px;
+    margin: 0px;
+    background-color: #00000000;
+}
+
+.header-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.profile-wrapper {
+    gap: 20px;
+    width: 100%;
+}
+
+.left-container, .right-container {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.button {
+    display: flex;
+    padding: 10px 20px;
+    background-color: hsl(0, 0%, 4%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    outline: 1px solid black;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.1s;
+    font-size: 20px;
+    line-height: 20px;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: hsl(0, 0%, 12%);
+}
+
+.right-container {
+    flex: 3;
+}
+
+.profile-container {
+    height: 100%; 
+    justify-content: center; 
+    display: flex;
+    flex-flow: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.photo img {
+    flex: 1 0 0px;
+    min-width: 256px;
+    height: 100px;
+    image-rendering: auto;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1 0 0px;
+    min-width: 256px;
+    align-items: center; 
+    max-width: 128px;
+}
+
+.info h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.info h1 span {
+    font-size: 16px;
+}
+
+.info .links {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.info .links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.info .links a img {
+    height: 20px; 
+    filter: invert(1) grayscale(100%) brightness(50%);
+    border: none; 
+    transition-duration: 0.1s;
+}
+
+.info .links a:hover img {
+    scale: 1.1;
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.text-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    column-gap: 5px;
+    row-gap: 0;
+    padding:16px;
+}
+
+.image-container {
+    overflow-y: visible;
+    /* height: calc(160vw - 32px);  */
+    /* height calculation was trial and error - adjust second value with amount of images */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    column-gap: 5px;
+    row-gap: 0;
+}
+
+.image-container a {
+    width: calc(33.3% - 3px);
+    text-decoration: none; 
+}
+
+.image-container a img {
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: 5px;
+    filter: brightness(95%);
+    transition-duration: 0.1s;
+}
+
+.image-container a img:hover {
+    filter: brightness(110%);
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
