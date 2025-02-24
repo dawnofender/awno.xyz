@@ -2,7 +2,7 @@ html, body {
     image-rendering: -webkit-optimize-contrast;
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: #000000;
     background: hsl(0, 0%, 8%);
     font-family: 'Dosis', 'Nunito', 'Roboto', sans-serif;
     overflow-y: scroll;
@@ -16,11 +16,59 @@ body::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
-
 a {text-decoration: none; }
 
+
+
+/* parallax effect */
+
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    perspective: 1px;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.layer0 img, .layer1 img, .layer2 img, .layer3 img {
+    width: 100%;
+    object-fit: fill;
+    position: absolute;
+}
+
+.layer1 {
+    translate: 0px -50vh -1px;
+    scale: 2;
+}
+  
+.layer2 {
+    translate: 0px -100vh -2px;
+    scale: 3;
+}
+  
+.layer3 {
+    translate: 0px -150vh -3px;
+    scale: 4;
+}
+
+
+
+/* things that matter */
+
 .main-container {
-    max-width: 83.3vw;
+    /* max-width: 83.3vw; */
     margin: 0px auto;
     padding: 16px;
     background: rgba(0, 0, 0, 0);
@@ -91,35 +139,32 @@ a {text-decoration: none; }
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
     height: 100vh;
-    padding: calc(25vh - 128px) calc(25% - 114px) calc(50vh - 128px);
+    padding: calc(25vh - 128px) 0 calc(50vh - 128px);
     border-radius: 8px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    column-gap: 32px;
-    row-gap: 32px;
+    row-gap: 64px;
     column-gap: 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-}
-
-.photo {
-    flex: 1 1 0px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  */
 }
 
 .photo img {
     height: 256px;
+    margin: 0 64px;
     object-fit: contain;
+    scale: 2;
 }
 
 .info {
     flex: 0 0 256px;
+    margin: 0 64px;
 }
 
 .info h1 {
     margin: 0;
     font-size: 24px;
-    color: #fff;
 }
 
 .info h1 span {
