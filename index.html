@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    /* Optional: Some basic styling */
+    .project {
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+    .project img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="profile-wrapper">
+      <div class="profile-container">
+        <a href="index.html">  
+          <div class="photo">
+            <img src="https://dawnofender.neocities.org/IMG_0039%20-%20transparent.PNG" alt="me">                
+          </div>    
+        </a>
+        <div class="info">
+          <h1>Dawn 3D<span style="float:right;">dawn・she/her</span></h1><span>aaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaa</span>
+          <div class="links">
+            <a href="https://bsky.app/profile/dawnofender.awno.xyz" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg" alt="Bluesky Icon">
+            </a>
+            <a href="" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/180px-GitHub_Invertocat_Logo.svg.png" alt="GitHub Icon">
+            </a>
+            <a href="https://dawnofender.booth.pm/" target="_blank">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb4F53F8ChXyAIXhYzpR5dcTYPOAn9cemrbw&s" alt="Booth Icon">
+            </a>
+            <a href="https://discord.gg/Fcmq25dS3C" target="_blank">
+              <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6918e57475a843f59f_icon_clyde_black_RGB.svg" alt="Discord Icon">
+            </a>
+            <a href="https://vrchat.com/home/user/usr_6b773b82-fc95-42be-8198-7b656f73ad93" target="_blank">
+              <img src="https://global.discourse-cdn.com/vrchat/original/2X/d/ddfe37dc3fb890cb7c5ad53d006ec5087755601c.png" alt="VRchat Icon">
+            </a>
+          </div>
+          <a href="#portfolio"><div class="button">my work :)</div></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container for the projects -->
+    <div id="portfolio" class="portfolio">
+      <h1>portfolio</h1>
+      
+      <div id="projects"></div>
+      <!-- Import TypeScript/JavaScript as an ES module -->
+      <script type="module" src="/src/main.ts"></script>
+    </div>  
+
+  </div>
+</body>
+</html>
