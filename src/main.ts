@@ -40,15 +40,11 @@ const projects: Project[] = [
 
 function loadProjects() {
   const pContainer = document.getElementById("projects") as HTMLElement;
-  const pParallaxLayer = document.getElementById("project-backgrounds") as HTMLElement;
 
   projects.forEach((project) => {
     const projectElement = document.createElement("div");
     projectElement.classList.add("project");
-
-  // <div class="parallax_layer layer3">
-  //   <img src="assets/placeholder/background.png" />
-  // </div>
+    // projectElement.style.background = project.background;
 
     const nameElement = document.createElement("h2");
     nameElement.classList.add("project-title");
@@ -92,51 +88,51 @@ function loadProjects() {
 
     pContainer.appendChild(projectElement);
 
-    // set up project parallax background
-    var bodyRect = document.body.getBoundingClientRect(),
-      projectRect = projectElement.getBoundingClientRect(),
-      imageOffset = (projectRect.top - bodyRect.top) / 2,
-      imageHeight = (projectRect.bottom - projectRect.top)*2;
+    // // set up project parallax background
+    // var bodyRect = document.body.getBoundingClientRect(),
+    //   projectRect = projectElement.getBoundingClientRect(),
+    //   imageOffset = (projectRect.top - bodyRect.top) / 2,
+    //   imageHeight = (projectRect.bottom - projectRect.top)*2;
 
 
-    const backgroundElement = document.createElement("img");
-    backgroundElement.src = project.background;
-    backgroundElement.style.transform = "translateY(calc(50% + "+imageOffset+"px))";
-    // backgroundElement.style.height = String(imageHeight) + "px";
+    // const backgroundElement = document.createElement("img");
+    // backgroundElement.src = project.background;
+    // backgroundElement.style.transform = "translateY(calc(50% + "+imageOffset+"px))";
+    // // backgroundElement.style.height = String(imageHeight) + "px";
 
-    pParallaxLayer.appendChild(backgroundElement);
+    // pParallaxLayer.appendChild(backgroundElement);
   });
 }
 
-function loadProjectsHTML() {
-  const pTemplate = document.getElementById('project-template') as HTMLTemplateElement;
-  const pContainer = document.getElementById('project-list') as HTMLElement;
+// function loadProjectsHTML() {
+//   const pTemplate = document.getElementById('project-template') as HTMLTemplateElement;
+//   const pContainer = document.getElementById('project-list') as HTMLElement;
 
-  projects.forEach((project) => {
-    const clone = pTemplate.content.cloneNode(true) as HTMLElement;
+//   projects.forEach((project) => {
+//     const clone = pTemplate.content.cloneNode(true) as HTMLElement;
     
-    const nameElement = clone.querySelector('.project-name') as HTMLElement;
-    const timeElement = clone.querySelector('.project-time') as HTMLElement;
-    const mediumElement = clone.querySelector('.project-medium') as HTMLElement;
-    const imageElement = clone.querySelector('.project-image') as HTMLImageElement;
-    const contentElement = clone.querySelector('.project-content') as HTMLElement;
-    const creditsElement = clone.querySelector('.project-credits') as HTMLElement;
+//     const nameElement = clone.querySelector('.project-name') as HTMLElement;
+//     const timeElement = clone.querySelector('.project-time') as HTMLElement;
+//     const mediumElement = clone.querySelector('.project-medium') as HTMLElement;
+//     const imageElement = clone.querySelector('.project-image') as HTMLImageElement;
+//     const contentElement = clone.querySelector('.project-content') as HTMLElement;
+//     const creditsElement = clone.querySelector('.project-credits') as HTMLElement;
   
-    nameElement.textContent = project.name;
-    timeElement.textContent = project.time;
-    imageElement.src = project.image;
-    imageElement.alt = project.name;
-    contentElement.innerHTML = project.content;
-    mediumElement.textContent = project.medium;
+//     nameElement.textContent = project.name;
+//     timeElement.textContent = project.time;
+//     imageElement.src = project.image;
+//     imageElement.alt = project.name;
+//     contentElement.innerHTML = project.content;
+//     mediumElement.textContent = project.medium;
     
-    if (project.credits) {
-      creditsElement.textContent = `Credits: ${project.credits}`;
-    } else {
-      creditsElement.style.display = "none";
-    }
+//     if (project.credits) {
+//       creditsElement.textContent = `Credits: ${project.credits}`;
+//     } else {
+//       creditsElement.style.display = "none";
+//     }
 
-    pContainer.appendChild(clone);
-  });
-}
+//     pContainer.appendChild(clone);
+//   });
+// }
 
 document.addEventListener("DOMContentLoaded", loadProjects);
