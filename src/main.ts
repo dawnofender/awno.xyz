@@ -7,7 +7,8 @@ if (appDiv) {
 
 interface Project {
   name: string;
-  image: string;
+  background: string;
+  images: string[];
   time: string;
   medium: string;
   content: string;
@@ -17,14 +18,16 @@ interface Project {
 const projects: Project[] = [
   {
     name: "dust & snow", 
-    image: "assets/dustandsnow.png",
+    background: "assets/dustandsnow.png",
+    images: ["assets/dustandsnow.png"],
     time: "April 2023", 
     medium: "Blender, Unity",
     content: "This world started with a simple goal - to recreate the effect of snow blowing in the wind. But after I had that figured out, I had come up with too many ideas to move on from the project.  <br>Eventually, this developed into a full recreation of a setting from one of my stories. A city buried in deep under the snow on a post-apocalyptic earth, distanced from the sun. Scattered around you'll find small remnants of civilization - a crane poking out from the buried city, an abandoned plane, and more. Layers of clouds blanket the sky, which are illuminated in realtime by meteors as they pass through. <br>Despite the cold and isolating atmosphere, some visitors seem to find comfort in this kind of environment. At spawn, you'll find a picnic blanket and the warm light of a single lantern."
   },
   {
     name: "swan bear", 
-    image: "assets/swanbear.jpg",
+    background: "assets/swanbear.jpg",
+    images: ["assets/swanbear.jpg"],
     time: "April 2023", 
     medium: "Blender, Unity", 
     content: "placeholder text",
@@ -37,13 +40,18 @@ const projects: Project[] = [
 
 function loadProjects() {
   const pContainer = document.getElementById("projects") as HTMLElement;
+  const pParallaxLayer = document.getElementById("project-backgrounds") as HTMLElement;
 
   projects.forEach((project) => {
     const projectElement = document.createElement("div");
     projectElement.classList.add("project");
 
+  // <div class="parallax_layer layer3">
+  //   <img src="assets/placeholder/background.png" />
+  // </div>
+
     const nameElement = document.createElement("h2");
-    nameElement.classList.add("project-name");
+    nameElement.classList.add("project-title");
     nameElement.textContent = project.name;
 
     const timeElement = document.createElement("p");
@@ -55,8 +63,8 @@ function loadProjects() {
     mediumElement.textContent = project.medium;
 
     const imageElement = document.createElement("img");
-    imageElement.classList.add("project-image");
-    imageElement.src = project.image;
+    imageElement.classList.add("project-images");
+    imageElement.src = project.images;
     imageElement.alt = project.name;
 
     const contentElement = document.createElement("div");
@@ -80,7 +88,23 @@ function loadProjects() {
       creditsElement
     );
 
+
+
     pContainer.appendChild(projectElement);
+
+    // set up project parallax background
+    var bodyRect = document.body.getBoundingClientRect(),
+      projectRect = projectElement.getBoundingClientRect(),
+      imageOffset = (projectRect.top - bodyRect.top) / 2,
+      imageHeight = (projectRect.bottom - projectRect.top)*2;
+
+
+    const backgroundElement = document.createElement("img");
+    backgroundElement.src = project.background;
+    backgroundElement.style.transform = "translateY(calc(50% + "+imageOffset+"px))";
+    // backgroundElement.style.height = String(imageHeight) + "px";
+
+    pParallaxLayer.appendChild(backgroundElement);
   });
 }
 
