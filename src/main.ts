@@ -44,7 +44,15 @@ function loadProjects() {
   projects.forEach((project) => {
     const projectElement = document.createElement("div");
     projectElement.classList.add("project");
-    // projectElement.style.background = project.background;
+    projectElement.style.background = project.background;
+
+    const backgroundElement = document.createElement("div");
+    backgroundElement.classList.add("project-background");
+
+    const backgroundImgElement = document.createElement("img");
+    backgroundImgElement.src = project.background;
+    backgroundImgElement.alt = project.name;
+    
 
     const nameElement = document.createElement("h2");
     nameElement.classList.add("project-title");
@@ -75,7 +83,12 @@ function loadProjects() {
       creditsElement.style.display = "none";
     }
 
+    backgroundElement.append(
+      backgroundImgElement
+    );
+
     projectElement.append(
+      backgroundElement,
       nameElement,
       timeElement,
       mediumElement,
