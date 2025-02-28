@@ -44,19 +44,18 @@ function loadProjects() {
   projects.forEach((project) => {
     const projectElement = document.createElement("div");
     projectElement.classList.add("project");
-    projectElement.style.background = project.background;
 
-    const backgroundElement = document.createElement("div");
+    const contentElement = document.createElement("div");
+    contentElement.classList.add("project-content");
+
+    const backgroundElement = document.createElement("img");
     backgroundElement.classList.add("project-background");
-
-    const backgroundImgElement = document.createElement("img");
-    backgroundImgElement.src = project.background;
-    backgroundImgElement.alt = project.name;
+    backgroundElement.src = project.background;
+    backgroundElement.alt = project.name;
     
-
-    const nameElement = document.createElement("h2");
-    nameElement.classList.add("project-title");
-    nameElement.textContent = project.name;
+    const titleElement = document.createElement("h2");
+    titleElement.classList.add("project-title");
+    titleElement.textContent = project.name;
 
     const timeElement = document.createElement("p");
     timeElement.classList.add("project-time");
@@ -71,9 +70,9 @@ function loadProjects() {
     imageElement.src = project.images;
     imageElement.alt = project.name;
 
-    const contentElement = document.createElement("div");
-    contentElement.classList.add("project-content");
-    contentElement.innerHTML = project.content;
+    const descriptionElement = document.createElement("div");
+    descriptionElement.classList.add("project-description");
+    descriptionElement.innerHTML = project.content;
 
     const creditsElement = document.createElement("p");
     creditsElement.classList.add("project-credits");
@@ -83,20 +82,19 @@ function loadProjects() {
       creditsElement.style.display = "none";
     }
 
-    backgroundElement.append(
-      backgroundImgElement
-    );
-
-    projectElement.append(
+    contentElement.append(
       backgroundElement,
-      nameElement,
       timeElement,
       mediumElement,
       imageElement,
-      contentElement,
-      creditsElement
-    );
+      descriptionElement,
+      creditsElement,
+    )
 
+    projectElement.append(
+      titleElement,
+      contentElement
+    )
 
 
     pContainer.appendChild(projectElement);
