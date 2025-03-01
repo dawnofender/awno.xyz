@@ -52,10 +52,14 @@ function loadProjects() {
     backgroundElement.classList.add("project-background");
     backgroundElement.src = project.background;
     backgroundElement.alt = project.name;
-    
+
     const titleElement = document.createElement("h2");
     titleElement.classList.add("project-title");
     titleElement.textContent = project.name;
+
+    const filterElement = document.createElement("div")
+    filterElement.classList.add("project-header-filter");
+    filterElement.style.backgroundImage = "url("+project.background+")";
 
     const timeElement = document.createElement("p");
     timeElement.classList.add("project-time");
@@ -82,6 +86,8 @@ function loadProjects() {
       creditsElement.style.display = "none";
     }
 
+
+    filterElement.append(backgroundElement)
     contentElement.append(
       backgroundElement,
       timeElement,
@@ -92,6 +98,7 @@ function loadProjects() {
     )
 
     projectElement.append(
+      filterElement,
       titleElement,
       contentElement
     )
