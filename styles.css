@@ -14,17 +14,22 @@ html, body {
     font-family: 'Dosis', 'Nunito', 'Roboto', sans-serif;
     overflow-y: scroll;
     scrollbar-width: none; 
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
     overflow: -moz-scrollbars-none;
     list-style-type: "✦  ";
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none; 
     width: 0;
     height: 0;
-}
+} */
 
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto !important;
+	}
+}
 
 a {text-decoration: none; }
 
@@ -121,10 +126,14 @@ a {text-decoration: none; }
 }
 /* portfolio */
 
+#portfolio {
+    scroll-behavior: smooth;
+}
 .portfolio {
     /* transform: translateZ(-20cm); */
     display:flex;
     flex-direction: column;
+    overflow-y:clip;
 }
 
 .portfolio span {
@@ -186,7 +195,7 @@ a {text-decoration: none; }
     height:100vh;
     position:absolute;
     width:100%;    
-    /* margin-top: calc(var(--header-padding) * -1); */
+    margin-top: calc(var(--header-padding) * -1);
 }
 
 .project-title {
@@ -266,20 +275,19 @@ a {text-decoration: none; }
 
 .header-blur {
     position:sticky;
-    margin-bottom:calc(-4*var(--header-padding));
-    width:100%;
-    height:calc(4*var(--header-padding));
-    max-height:33.3%;
-    position: sticky;
+    margin-bottom:calc(4*var(--header-padding));
     top:0;
     z-index:8;
-    /* background:#f0f; */
 }
 
 
 .header-blur > div, .header-blur::before, .header-blur::after {
   position: absolute;
+  width:100%;
+  height:calc(4*var(--header-padding));
+  max-height:33.3vh;
   inset: 0;
+  background:#f0f;
 }
 
 .header-blur::before {
@@ -460,7 +468,7 @@ a {text-decoration: none; }
     transform:translateY(-0.02em);
 }
 
-.info .button {
+.info button {
     position:relative;
     display:flex;
     width:100%;
@@ -529,7 +537,7 @@ a {text-decoration: none; }
 .photo img {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: min(calc(30vw + 10em), 150vw);
+    width: var(--profile-scale);
     z-index: 10;
     /* height: 512px; */
 
@@ -601,7 +609,6 @@ a {text-decoration: none; }
 
 .info .ring {
     grid-area: center;
-    background:#
 }
 
 .info .ring > div {
@@ -609,7 +616,7 @@ a {text-decoration: none; }
     transform: translate(-50%, -40%) rotateY(-75deg) rotateX(30deg);
     z-index: 5;
     width: calc(0.333 * var(--profile-scale));
-    height: 100%;
+    height: calc(0.333 * var(--profile-scale));
     background-color: rgb(255, 255, 255);
     opacity: 0.75;
     shape-outside: circle(50%);
