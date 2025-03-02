@@ -67,7 +67,7 @@ const projects: Project[] = [
   {
     name: "animation",
     backgroundColor: "#eee", 
-    // background: "",
+    background: "",
     // images: [""],
     // videos: ["https://drive.google.com/file/d/1WIxCw4bjHrZEc_Z2PeirJ1cyS6a1mP5j/preview"],
     gDriveVideos: ["https://drive.google.com/file/d/1WIxCw4bjHrZEc_Z2PeirJ1cyS6a1mP5j/preview"],
