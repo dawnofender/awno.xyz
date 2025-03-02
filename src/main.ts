@@ -1,5 +1,4 @@
 import styles from "../style.css"
-import React from 'react';
 
 const scrollButtons = document.querySelectorAll<HTMLButtonElement>("[scroll-target]");
 var shyElements: Element[] = Array.from(document.getElementsByClassName("shy"));
