@@ -761,7 +761,7 @@ a {text-decoration: none; }
 
 .info .links a img {
     height: calc(0.03 * var(--profile-scale)); 
-    filter: invert(1) grayscale(100%) brightness(50%) contrast(500%);
+    /* filter: invert(1) grayscale(100%) brightness(50%) contrast(500%); */
     border: none; 
     scale: 0.75;
     transition-duration: 0.1s;

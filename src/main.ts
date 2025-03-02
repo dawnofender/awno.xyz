@@ -36,7 +36,7 @@ const projects: Project[] = [
     images: ["assets/placeholder/bafkreif7izwkpeptaqv2kyioxsc7v5fggr54taflgnxeavcumveoyaog7i.jpg"],
     time: "September 2023", 
     medium: "3D model (Blender, Unity)", 
-    content: "<p>Rings of Selene is a world I created to be experienced in VR. Set in the distant future, it's a luxurious apartment on a residential space station.<p>Arriving through the front door, you'll find yourself in a beautifully lit foyer - bright panels on the walls imitate a window's natural light. <p>Continuing through the tunnels, you'll also find:<p>- A basement, complete with a full cinema and 3D-printed-snacks bar.<p>- A cozy corner, filled with pillows and cloth-simulated blankets. Believe it or not, I've seen people fall asleep here!<p>- A secret third floor, accessible by crawling through the vents. (an exit is just barely visible in the attached image)" 
+    content: "<p>I'm very proud of Rings Of Selene, a world I created to be experienced in VR. Set in the distant future, it's a luxurious apartment on a residential space station.<p>Entering through the front door, you'll find yourself immersed in a beautifully lit foyer - bright panels on the walls imitate a window's natural light. <p>Continuing through the tunnels, you'll encounter:<p> ...a  relaxing basement, complete with a full cinema and 3D-printed-snacks bar.<p> ...a cozy corner, filled with pillows and cloth-simulated blankets. Believe it or not, I've seen visitors asleep here!<p> ...and a secret third floor, accessible by crawling through the vents. (an exit is just barely visible in the attached image)" 
   },
   {
     name: "character model - yuki", 
@@ -45,7 +45,7 @@ const projects: Project[] = [
     images: ["https://booth.pximg.net/b3490e62-30a2-4dd7-8656-184a1141ed19/i/5868259/6ca42101-e045-4880-bdf5-9bdf57adda30_base_resized.jpg", "https://booth.pximg.net/b3490e62-30a2-4dd7-8656-184a1141ed19/i/5868259/adf6d322-5a6e-486d-a700-48e97637ea50_base_resized.jpg"],
     time: "June 2024", 
     medium: "3D model (Blender, Gimp, Unity)", 
-    content: "<p>First and foremost, this model, when used as an avatar, is meant to feel comfortable. An oversized jacket and shirt make her appear small in comparison, and the boots help to balance this out, providing stability.<p>Other players can grab the butterfly - but if they let go, it'll fly right back to her.<p>A careful balance of optimization and quality, this model is game-ready and still looks good up close. The topology creates a smooth silhouette with minimal geometry.<p>Yuki is built from the ground up for customization - with neat rectangular UVs, .blend and .psd files all included.",
+    content: "<p>Yuki is an avatar designed to bring comfort and peace. An oversized jacket and shirt that she wears make her appear small in comparison, and the boots help to balance this out, providing stability.<p>See the butterfly on her head? Other players who interact with yuki can try to hold it - but if they let go, it'll fly right back to her.<p>A careful balance of rendering optimization and quality, this model represents great attention to detail, and is still game-ready. The topology creates a smooth silhouette with minimal geometry.<p>Yuki is built from the ground up for customization - with neat rectangular UVs, .blend and .psd files all included.",
   },
   {
     name: "swan bear", 
@@ -54,7 +54,7 @@ const projects: Project[] = [
     images: ["https://booth.pximg.net/b3490e62-30a2-4dd7-8656-184a1141ed19/i/4675577/9e0c7a16-0f34-4e42-b55b-a2ebb1e078c2_base_resized.jpg", "https://booth.pximg.net/b3490e62-30a2-4dd7-8656-184a1141ed19/i/4675577/4d5e549b-dd78-42cb-a206-477c68709d89_base_resized.jpg", "https://booth.pximg.net/b3490e62-30a2-4dd7-8656-184a1141ed19/i/4675577/1013f380-9bf4-4db3-bd74-4e8c144727dc_base_resized.jpg", "https://booth.pximg.net/b3490e62-30a2-4dd7-8656-184a1141ed19/i/4675577/6a946d74-54fe-42e6-aae7-33cfc6b94980_base_resized.jpg", "https://booth.pximg.net/b3490e62-30a2-4dd7-8656-184a1141ed19/i/4675577/0459bca3-f981-4fde-a14c-628038f11f83_base_resized.jpg"],
     time: "April 2023", 
     medium: "3D model (Blender, Unity)", 
-    content: "<p>Adorable, friendly, squishable - It’s a teddy bear, but for maximum cuteness, it basically has the face of a kitten. This was… only somewhat intentional!<p>If you boop it it sounds like a squishy toy.<p>Swan bear is easy to customize without even opening Unity. It has many colors and accessories to choose from, all through a radial UI with custom icons and layout.<p>On top of all that, it's extremely optimized. With only ~7k tris and a single atlased texture, players across all platforms can access this avatar with ease.<p>This one is officially featured and promoted by VRChat - the largest social VR platform, in terms of active VR users.",
+    content: "<p>Adorable, friendly, and squishable - Swan bear is a teddy bear, but with the cutest face of a kitten! (I will admit that this unique combination was only somewhat intentional) <p>For added cuteness, If you boop it's nose it makes a squishy toy sound.<p>Swan bear is easy to customize; you don't need to even use Unity. It with a wide selection of colors and accessories, all through a radial UI with custom icons and layout.<p>On top of all that, Swan Bear is highly optimized. With only ~7k tris and a single atlased texture, players across all platforms can access this avatar with ease.<p>As evidence for it's desireability, Swan Bear is officially featured and promoted by VRChat - the largest social VR platform, in terms of active VR users.",
     credits: "vrchat, for some ui elements" 
   },
   {
@@ -66,7 +66,7 @@ const projects: Project[] = [
     gDriveVideos: ["https://drive.google.com/file/d/1WIxCw4bjHrZEc_Z2PeirJ1cyS6a1mP5j/preview"],
     time: "October 2024", 
     medium: "Blender", 
-    content: "<p>The focus of this project was to combine different mediums of animation and experiment with a new animation style, exaggerating suspense and impact.<p>To save time, I reused assets from previous projects, allowing me to focus entirely on exploring motion - and it ended up being a lot of fun!<p>Both models were set up with IK.",
+    content: "<p>The goal of this project is to create an animation that allows the viewer to experience the effect of exaggerated suspense and impact. I accomplished this goal by experimenting and combining different mediums.<p>This project emerged as a cumulation of a few previous projects. Yuki and Swan bear make an appearance! they helped me to focus entirely on exploring motion - which was fun for me as a creator, and for the viewer.<p>In this animation, Yuki and Swan Bear were set up to use IK.",
   },
   {
     name: "awno.xyz", 
@@ -75,7 +75,7 @@ const projects: Project[] = [
     images: ["assets/placeholder/2025-03-02-022338_hyprshot.png"],
     time: "Feburary 2025", 
     medium: "HTML, CSS, Typescript", 
-    content: "<p>This website!<p>The website I built for this portfolio was my first proper web project since 10th grade Computer Science. And, despite the pain it's caused me, I'm pretty happy with it!<p>Many of the visual effects on this website use purely CSS. This includes the dynamic header, as well as the 3D elements and parallax. <p>Each project is loaded onto the page with typescript - it's all modular, so it's super easy to edit.",
+    content: "<p>This website!<p>The website I built for this portfolio was my first proper web project since 10th grade Computer Science. And, despite the challenges, I have learned a lot and am very happy with the finished product.<p>Many of the visual effects on this website use purely CSS. This includes the dynamic header, as well as the 3D elements and parallax.<p>Each project is loaded onto the page with typescript - it's all modular, so it's super easy to edit.",
     credits: "some 3 digit number of stackoverflow authors" 
   },
   // {
@@ -104,7 +104,7 @@ const projects: Project[] = [
     // images: ["assets/dustandsnow.png", "assets/dustandsnow.png", "assets/dustandsnow.png", "assets/dustandsnow.png"],
     time: "April 2023", 
     medium: "3D Environment - Blender, Unity, C#",
-    content: "This world started with a simple goal - to recreate the effect of snow blowing in the wind. After I had that figured out, I had come up with too many ideas to move on from the project.  <p>Eventually, this developed into a full recreation of a setting from one of my stories. A city buried in deep under the snow on a post-apocalyptic earth, distanced from the sun. Scattered around you'll find small remnants of civilization - a crane poking out from the buried city, an abandoned plane, and more. Layers of clouds blanket the sky, which are illuminated in realtime by meteors as they pass through. <p>Despite the cold and isolating atmosphere, some visitors seem to find comfort in this kind of environment. At spawn, you'll find a picnic blanket and the warm light of a single lantern."
+    content: "<p>This VR world is a project that I am most proud of. I created this world with a simple goal - to allow visitors to experience the snow blowing in the wind, without the biting cold. Once I got started, I came up with idea after idea...<p>... Eventually, this developed into a full environment recreation from a story of mine. A city buried deep under the snow on a post-apocalyptic earth, distanced from the sun. Scattered around you'll find small remnants of civilization - a crane poking out from the buried city, a frozen corpse, an abandoned plane,  and more. Layers of clouds blanket the sky, illuminated in realtime by meteors as they pass through.<p>Despite the cold and isolating atmosphere, some visitors seem to find comfort in this environment. At spawn, you'll find a picnic blanket and the warm light of a single lantern."
   }
   // {
   //   name: "works in progress", 
