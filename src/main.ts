@@ -3,10 +3,6 @@ import styles from "../style.css"
 const scrollButtons = document.querySelectorAll<HTMLButtonElement>("[scroll-target]");
 var shyElements: Element[] = Array.from(document.getElementsByClassName("shy"));
 
-var carouselPositions;
-var halfContainer;
-var currentItem;
-
 scrollButtons.forEach(button => {
   button.addEventListener("click", () => {
     const targetId = button.getAttribute("scroll-target");
@@ -251,12 +247,12 @@ function loadProjects() {
         galleryElement.append(videoElement); 
       });
     } else {
-      galleryElement.style.opacity = 0;
+      galleryElement.style.opacity = "0";
     }
     
     const descriptionElement = document.createElement("div");
     descriptionElement.classList.add("project-description");
-    descriptionElement.innerHTML = "<span>"+project.content+"</span>";
+    descriptionElement.innerHTML = project.content;
 
     const footerElement = document.createElement("div");
     footerElement.classList.add("project-footer");
@@ -276,7 +272,7 @@ function loadProjects() {
     footerElement.append(mediumElement,  creditsElement, timeElement);
     // contentElement.append(timeElement, mediumElement, galleryElement, descriptionElement, creditsElement);
 
-    projectElement.append(backgroundElement, videoBackgroundElement, galleryElement, descriptionElement, footerElement);
+    projectElement.append(backgroundElement, videoBackgroundElement, descriptionElement, galleryElement, footerElement);
 
     pContainer.append(headerElement);
     pContainer.appendChild(projectElement);
