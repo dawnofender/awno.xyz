@@ -1,5 +1,3 @@
-import styles from "../style.css"
-
 const scrollButtons = document.querySelectorAll<HTMLButtonElement>("[scroll-target]");
 var shyElements: Element[] = Array.from(document.getElementsByClassName("shy"));
 
@@ -172,7 +170,7 @@ function loadProjects() {
     }
     scrollPreviousElement.addEventListener("click", () => {
       // find the previous project element
-      if (index > 0) {
+      if (index > 0 && pContainer) {
         const prevProject = pContainer.children[2 * (index - 1)];
         if (prevProject) {
           prevProject.scrollIntoView({ behavior: "smooth" });
@@ -190,7 +188,7 @@ function loadProjects() {
       scrollNextElement.disabled = true;
     }
     scrollNextElement.addEventListener("click", () => {
-      if (index < projects.length - 1) {
+      if (index < projects.length - 1 && pContainer) {
         const nextProject = pContainer.children[2 * (index + 1)];
         if (nextProject) {
           nextProject.scrollIntoView({ behavior: "smooth" });
@@ -273,9 +271,10 @@ function loadProjects() {
     // contentElement.append(timeElement, mediumElement, galleryElement, descriptionElement, creditsElement);
 
     projectElement.append(backgroundElement, videoBackgroundElement, descriptionElement, galleryElement, footerElement);
-
-    pContainer.append(headerElement);
-    pContainer.appendChild(projectElement);
+    if (pContainer){
+      pContainer.append(headerElement);
+      pContainer.appendChild(projectElement);  
+    };
   });
   shyElements = Array.from(document.getElementsByClassName("shy"));
 }
